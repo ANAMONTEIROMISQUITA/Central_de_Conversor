@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template
+from conversores.moedas import converter_moeda
 
 app = Flask(__name__)
 
@@ -8,23 +9,9 @@ def inicio():
     return render_template("index.html")
 
 
-@app.route("/moedas", methods=["GET", "POST"])
+@app.route("/moedas")
 def moedas():
-    resultado = None
-
-    if request.method == "POST":
-        valor = float(request.form["valor"])
-        conversao = request.form["conversao"]
-
-        cotacao = 5.50
-
-        if conversao == "real_dolar":
-            resultado = valor / cotacao
-
-        elif conversao == "dolar_real":
-            resultado = valor * cotacao
-
-    return render_template("moedas.html", resultado=resultado)
+    return render_template("moedas.html")
 
 
 if __name__ == "__main__":
