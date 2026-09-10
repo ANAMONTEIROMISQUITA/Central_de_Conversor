@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Moedas</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 Conversor de Moedas</h1>
+
+        <form method="POST">
+
+            <label>Valor:</label>
+
+            <input
+                type="number"
+                name="valor"
+                step="0.01"
+                placeholder="Digite um valor"
+                required
+            >
+
+            <label>Conversão:</label>
+
+            <select name="conversao">
+
+                <option value="real_dolar">
+                    Real → Dólar
+                </option>
+
+                <option value="dolar_real">
+                    Dólar → Real
+                </option>
+
+            </select>
+
+            <button type="submit" class="botao">
+                Converter
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
