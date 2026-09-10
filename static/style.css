@@ -30,12 +30,16 @@ p {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
+
     border: none;
     border-radius: 8px;
+
     background-color: #4f46e5;
     color: white;
+
     text-decoration: none;
     font-size: 16px;
+
     cursor: pointer;
 }
 
@@ -59,16 +63,20 @@ input,
 select {
     width: 100%;
     padding: 12px;
+
     border: 1px solid #ccc;
     border-radius: 8px;
+
     font-size: 16px;
 }
 
 .resultado {
     margin-top: 25px;
     padding: 15px;
+
     background-color: #eee;
     border-radius: 8px;
+
     font-size: 20px;
     font-weight: bold;
 }
@@ -76,6 +84,7 @@ select {
 .voltar {
     display: block;
     margin-top: 20px;
+
     color: #4f46e5;
     text-decoration: none;
 }

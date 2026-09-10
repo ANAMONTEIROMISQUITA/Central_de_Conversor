@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversor de Moedas</title>
-    <link rel="stylesheet" href="../static/style.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
@@ -15,19 +17,20 @@
 
         <form method="POST">
 
-            <label>Valor:</label>
+            <label for="valor">Valor:</label>
 
             <input
                 type="number"
+                id="valor"
                 name="valor"
                 step="0.01"
                 placeholder="Digite um valor"
                 required
             >
 
-            <label>Conversão:</label>
+            <label for="conversao">Conversão:</label>
 
-            <select name="conversao">
+            <select id="conversao" name="conversao">
 
                 <option value="real_dolar">
                     Real → Dólar
@@ -44,6 +47,18 @@
             </button>
 
         </form>
+
+        {% if resultado is not none %}
+
+            <div class="resultado">
+                Resultado: {{ "%.2f"|format(resultado) }}
+            </div>
+
+        {% endif %}
+
+        <a href="/" class="voltar">
+            ← Voltar
+        </a>
 
     </div>
 

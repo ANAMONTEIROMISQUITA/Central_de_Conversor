@@ -1,10 +1,9 @@
-def converter_moeda(valor, moeda_origem, moeda_destino, cotacoes):
+def converter_moeda(valor, conversao):
 
-    if moeda_origem == moeda_destino:
-        return valor
+    cotacao = 5.50
 
-    valor_em_dolar = valor / cotacoes[moeda_origem]
+    if conversao == "real_dolar":
+        return valor / cotacao
 
-    resultado = valor_em_dolar * cotacoes[moeda_destino]
-
-    return resultado
+    elif conversao == "dolar_real":
+        return valor * cotacao
